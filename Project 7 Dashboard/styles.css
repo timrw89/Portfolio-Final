@@ -145,10 +145,8 @@ header p, header h3 {
 }
 
 .headline {
-    padding: 10px;
-    width: 52.5%;
-    display: flex;
-    justify-content: center;
+    padding: 10px !important;
+    
 }
 
 .tab {

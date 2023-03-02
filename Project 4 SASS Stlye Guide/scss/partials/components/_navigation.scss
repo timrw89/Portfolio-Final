@@ -1,0 +1,29 @@
+//Navigation//
+.nav {
+    padding-left: 0;
+    flex-basis: 100%;
+    @include flexy($dir: column);
+        &-link {
+            text-align: center;
+            border-radius: 5px;
+            padding: 10px 0;
+            display: block;
+            width: 100%;
+            transition: 
+                background-color .2s ease-in-out, 
+                color .2s ease-in-out;
+            @include mq(med) {
+
+                    flex-basis: 100px;
+            }
+            &:hover {
+                color: $white;
+                background-color: $color-primary;
+            }
+        } 
+
+    @include mq(med) {
+            @include flexy($dir: row, $just: flex-end);
+            align-items: center;
+          }
+    }

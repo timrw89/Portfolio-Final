@@ -1,0 +1,5 @@
+//Variables
+$color-primary: #1c92ec;
+$color-primary-light: lighten($color-primary, 40%);
+$color-secondary: complement($color-primary);
+$color-accent: #eedede;

@@ -1,0 +1,62 @@
+@mixin standarddisplay {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    
+  }
+
+@mixin center {
+    width: 90%;
+    max-width: $max-width;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  
+@mixin flexy($disp: flex,
+$dir: null,
+$wrap: null,
+$just: null,){
+  display: $disp;
+  flex-direction: $dir;
+  flex-wrap: $wrap;
+  justify-content: just;
+}
+
+@mixin mq($break){
+  @if $break == 'xs'{
+    @media(max-width: $break-xs){
+      @content;
+    }
+  }
+  @else if $break == 'sm' {
+    @media(max-width: $break-s){
+      @content;
+    }
+  }
+  @else if $break == 'med' {
+    @media(max-width: $break-m){
+      @content;
+    }
+  }
+  @else if $break == 'lg' {
+    @media(max-width: $break-lg){
+      @content;
+    }
+  }
+}
+
+@mixin gridsystem($map) {
+  @each $grid, $color in $map {
+    &-#{$grid} {
+      background-color: $color;
+    }
+  }
+} 
+
+@mixin fbasis() {
+  @for $i from 1 through 12 {
+    &-#{$i} {
+         flex-basis: (8.33%, $i + 33.33% * 3);
+    }
+  } 
+}

@@ -1,0 +1,39 @@
+
+//Grid System//
+.container {
+    padding: 0 10px;
+   
+    @include mq(med) {
+        max-width: 1400px;
+       @include standarddisplay;
+       
+      }
+  }
+  
+.row {
+    @include flexy($dir: column);
+    padding: 1em 10px;
+    @include mq(med){
+      flex-direction: row;
+    }
+  }
+  
+[class^=col] {
+    margin-top: 10px;
+    flex-basis: 100%;
+    min-height: 25px;
+    padding: 10px;
+    border-radius: 5px;
+  }
+
+
+.themes.col{
+  @include gridsystem($grid);
+} 
+
+.col {
+  
+}
+
+
+  

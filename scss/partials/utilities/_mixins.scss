@@ -1,0 +1,39 @@
+
+
+//Media @Queries
+@mixin mq($break){
+    @if $break == 'xs'{
+      @media(max-width: $break-xs){
+        @content;
+      }
+    }
+    @else if $break == 'sm' {
+      @media(max-width: $break-s){
+        @content;
+      }
+    }
+    @else if $break == 'med' {
+      @media(max-width: $break-m){
+        @content;
+      }
+    }
+    @else if $break == 'lg' {
+      @media(max-width: $break-lg){
+        @content;
+      }
+    }
+  }
+
+//z-index map
+
+$zindex: (
+  modal     : 9000, 
+  overlay   : 8000,
+  dropdown  : 7000,
+  header    : 6000,
+  footer    : 5000
+);
+
+// .header {
+//   z-index: map-get($zindex, header);
+// }
