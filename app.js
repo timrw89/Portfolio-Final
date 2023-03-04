@@ -2,7 +2,7 @@ var i = 0;
 var txt = `Hi, I'm Tim. I'm passionate about web development and creativity.
 Please take a look around my site.
 You'll find web development projects, photos, music and videos.`;
-var txtmdrn = `您好，我 叫 Tim。我 觉得 网络 和 网络 发展 都 有 意思的很。请看到我的网站。你要发现 网络 工程， 音乐 和 录像。 `;
+var txtmdrn = `您好，我 叫 Tim。我 觉得 网络 和 网络 发展 都 有 意思的很。请看到我的网站。你要发现 网络 工程， 音乐 和 录像。`;
 
 var speed = 60;
 
@@ -14,12 +14,14 @@ let dropdown = document.getElementById('dropdown');
 let langEng = document.getElementById('langEng');
 let langZh = document.getElementById('langZh');
 let mandarin = document.querySelectorAll('.mandarin');
+let english = document.querySelectorAll('.english');
+let title = document.getElementsByClassName('title');
 
 function typeWriter() {
     if (i <= txt.length) {
         document.getElementById('greeting').style.display = "flex";
         document.getElementById('wave').style.fill = "black";
-        document.getElementById('title').style.margin = "10px";
+        document.getElementById('titleHolder').style.margin = '10px';
         document.getElementById('mySidenav').style.width = "0";
         document.getElementById('wind').style.display = "inherit";
         document.getElementById('introType').innerHTML+=txt.charAt(i);
@@ -49,22 +51,47 @@ langButton.addEventListener("click", function() {
     dropdown.style.display = "block";
 });
 
-// greeting.addEventListener("click", function() {
-//     document.getElementById('greeting').style.display = "none";
-//     document.getElementById('title').style.margin = "90px auto auto auto";
-//   });
+
 
 handwave.addEventListener("click", function(){
     typeWriter();
 });
 
-// langEng.addEventListener("click", function() {
-//     document.querySelectorAll('.mandarin').style.display = 'none';
-//     document.querySelectorAll('.english').style.display = 'inline';
-// });
 
 langZh.addEventListener("click", e => {
-    document.getElementById('mandarin').style.display = 'inline';
+  for (let i = 0; i < mandarin.length; i++) {
+       let mand = mandarin[i];
+       console.log(mand);
+       mand.style.display = 'flex';
+
+       
+    }
+    for (let i = 0; i < english.length; i++) {
+        let eng = english[i];
+        console.log(eng);
+        eng.style.display = 'none';
+        
+     }
+     document.getElementById('introType').innerHTML=txtmdrn;
+
 });
 
-console.log(mandarin);
+
+langEng.addEventListener("click", e => {
+
+    for (let i = 0; i < english.length; i++) {
+        let eng = english[i];
+        console.log(eng);
+        eng.style.display = 'flex';
+        
+     }
+    for (let i = 0; i < mandarin.length; i++) {
+         let mand = mandarin[i];
+         console.log(mand);
+         mand.style.display = 'none';
+  
+         
+      }
+      document.getElementById('introType').innerHTML=txt;
+     
+  });
