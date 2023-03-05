@@ -200,7 +200,7 @@ nav {
     height: 50%;
     padding: 0;
     display: flex;
-    flex: column;
+    flex-direction: column;
     justify-content: flex-start;   
 }
 .topnav {
