@@ -5,7 +5,7 @@ You'll find web development projects, photos, music and videos.`;
 var txtmdrn = `您好，我 叫 Tim。我 觉得 创造性 和 网络 发展 都 有 意思的很。请看到我的网站。你要发现 网络 工程， 音乐 和 录像。`;
 
 var speed = 40;
-let home = document.getElementById('navHome');
+let home = document.getElementById('navhome');
 let typeGreeting = document.getElementById('introType');
 let greeting = document.getElementById('greeting');
 let handwave = document.getElementById('wave');
@@ -18,6 +18,7 @@ let mandarin = document.querySelectorAll('.mandarin');
 let english = document.querySelectorAll('.english');
 let title = document.getElementsByClassName('title');
 let navProjects = document.getElementById('navProjects');
+
 
 function typeWriter() {
     if (i <= txt.length) {
@@ -58,9 +59,11 @@ langButton.addEventListener("click", function() {
 handwave.addEventListener("click", function(){
     typeWriter();
 });
-navhome.addEventListener("click", function(){
+
+home.addEventListener("click", function(){
     typeWriter();
 });
+
 navProjects.addEventListener("click", function(){
     document.getElementById('mySidenav').style.width = "0";
     document.getElementById('wind').style.display = "inherit";
