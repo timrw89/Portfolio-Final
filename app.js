@@ -4,7 +4,7 @@ Please take a look around my site.
 You'll find web development projects, photos, music and videos.`;
 var txtmdrn = `您好，我 叫 Tim。我 觉得 创造性 和 网络 发展 都 有 意思的很。请看到我的网站。你要发现 网络 工程， 音乐 和 录像。`;
 
-var speed = 33;
+var speed = 40;
 let home = document.getElementById('navHome');
 let typeGreeting = document.getElementById('introType');
 let greeting = document.getElementById('greeting');

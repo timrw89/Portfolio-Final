@@ -100,7 +100,7 @@ header {
     width:95%;
     display: flex;
     flex-direction: row;
-    justify-content:flex-start;
+    
     align-items: center;
     padding: 4%;
     border-bottom: 1px solid #86c5d376;
@@ -194,6 +194,9 @@ nav {
     display: flex;
     flex: column;
     justify-content: flex-start;   
+}
+.topnav {
+    display: none;
 }
 
 .home {
@@ -363,4 +366,66 @@ footer h3 {
 @keyframes plantsgrow {
     0%{transform: scaleY(0%);}
     100%{ transform: scaleY(100%);}
+}
+
+@media(min-width: 768px){
+    header {
+        height: 1rem;
+        padding: 3%;
+        
+        
+    }
+    
+    .svgholder {
+        margin: 0;
+        padding: 0;
+        
+    }
+
+    .cardholder {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .titleHolder {
+        margin-top: 200px;
+    }
+}
+
+
+@media(min-width: 1024px) {
+    .topnav {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    .topnav a {
+        
+    }
+
+    .topnav .navItem {
+        padding: 5px;
+        text-decoration: none;
+        font-size: 20px;
+        color: #111;
+        display: flex;
+        flex-direction: row;
+    }
+    #navLanguage {
+        display: flex;
+        flex-direction: row;
+        padding: 3px;
+    }
+
+    #navLanguage svg {
+        padding: 5px;
+    }
+    
+   
+    .svgholder {
+        display: none;
+    }
+    .windOpen {
+        display: none;
+    }
 }

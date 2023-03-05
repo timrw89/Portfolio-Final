@@ -159,9 +159,6 @@ header {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -282,6 +279,10 @@ nav {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
+}
+
+.topnav {
+  display: none;
 }
 
 .home {
@@ -584,6 +585,76 @@ footer h3 {
   100% {
     -webkit-transform: scaleY(100%);
             transform: scaleY(100%);
+  }
+}
+
+@media (min-width: 768px) {
+  header {
+    height: 1rem;
+    padding: 3%;
+  }
+  .svgholder {
+    margin: 0;
+    padding: 0;
+  }
+  .cardholder {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .titleHolder {
+    margin-top: 200px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .topnav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .topnav .navItem {
+    padding: 5px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #111;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  #navLanguage {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    padding: 3px;
+  }
+  #navLanguage svg {
+    padding: 5px;
+  }
+  .svgholder {
+    display: none;
+  }
+  .windOpen {
+    display: none;
   }
 }
 /*# sourceMappingURL=styles.css.map */
