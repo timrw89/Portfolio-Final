@@ -423,6 +423,7 @@ nav {
           filter: grayscale(33%);
   -webkit-transition: 0.19s ease-in;
   transition: 0.19s ease-in;
+  padding-top: 5px;
 }
 
 .dashAdjust {
