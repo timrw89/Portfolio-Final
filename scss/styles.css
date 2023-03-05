@@ -28,8 +28,6 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: -webkit-gradient(linear, bottom #f1f49f, from(#dff1ff));
-  background: linear-gradient(to bottom #f1f49f, #dff1ff);
 }
 
 .background .color {
