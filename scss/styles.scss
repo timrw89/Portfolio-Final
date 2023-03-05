@@ -7,9 +7,10 @@
     font-family: cabin;
 }
 
-#mandarin {
+.mandarin {
     display: none;
 }
+
 
 
 body {
@@ -87,6 +88,13 @@ body {
 
 .title {
     display: flex;
+    justify-content: center;
+    padding: 1rem;
+    z-index: 3000;
+    position: relative;
+}
+#title {
+    display: none;
     justify-content: center;
     padding: 1rem;
     z-index: 3000;
@@ -363,10 +371,7 @@ footer h3 {
 }
 
 
-@keyframes plantsgrow {
-    0%{transform: scaleY(0%);}
-    100%{ transform: scaleY(100%);}
-}
+
 
 @media(min-width: 768px){
     header {
@@ -394,12 +399,24 @@ footer h3 {
 
 
 @media(min-width: 1024px) {
+
+    .background .color {
+        
+        filter: blur(300px);
+    }
     .topnav {
         display: flex;
         flex-direction: row;
         align-items: center;
     }
    
+      header {
+        height: 0.1rem;
+       padding: 2.5%;
+        
+        
+    }
+    
 
     .topnav .navItem {
         padding: 5px;
@@ -419,6 +436,9 @@ footer h3 {
         padding: 5px;
     }
     
+    .titleHolder {
+        margin-top: 400px;
+    }
    
     .svgholder {
         display: none;

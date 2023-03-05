@@ -4,7 +4,7 @@
   font-family: cabin;
 }
 
-#mandarin {
+.mandarin {
   display: none;
 }
 
@@ -138,6 +138,16 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 1rem;
+  z-index: 3000;
+  position: relative;
+}
+
+#title {
+  display: none;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -564,28 +574,6 @@ footer h3 {
   padding-right: 2%;
 }
 
-@-webkit-keyframes plantsgrow {
-  0% {
-    -webkit-transform: scaleY(0%);
-            transform: scaleY(0%);
-  }
-  100% {
-    -webkit-transform: scaleY(100%);
-            transform: scaleY(100%);
-  }
-}
-
-@keyframes plantsgrow {
-  0% {
-    -webkit-transform: scaleY(0%);
-            transform: scaleY(0%);
-  }
-  100% {
-    -webkit-transform: scaleY(100%);
-            transform: scaleY(100%);
-  }
-}
-
 @media (min-width: 768px) {
   header {
     height: 1rem;
@@ -610,6 +598,10 @@ footer h3 {
 }
 
 @media (min-width: 1024px) {
+  .background .color {
+    -webkit-filter: blur(300px);
+            filter: blur(300px);
+  }
   .topnav {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -621,6 +613,10 @@ footer h3 {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+  }
+  header {
+    height: 0.1rem;
+    padding: 2.5%;
   }
   .topnav .navItem {
     padding: 5px;
@@ -647,6 +643,9 @@ footer h3 {
   }
   #navLanguage svg {
     padding: 5px;
+  }
+  .titleHolder {
+    margin-top: 400px;
   }
   .svgholder {
     display: none;
