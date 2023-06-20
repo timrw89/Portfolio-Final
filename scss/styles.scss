@@ -1,6 +1,8 @@
 @import 'partials/base/index';
 @import 'partials/components/index';
 @import 'partials/utilities/index';
+
+
 * {
     padding: 0;
     margin: 0;
@@ -326,6 +328,23 @@ nav {
     100%{transform: translate(0%, 0%); }
     
 }
+
+.musicHolder {
+    margin-top:auto;
+    z-index: 2000;
+}
+.musicPlayers {
+    padding: 35px;
+    align-items: center;
+}
+
+.bandcamp {
+   display: flex;
+   align-items: center;
+   padding: 10px;
+   z-index: 2000;
+}
+
   
 footer {
     z-index: 3000;
