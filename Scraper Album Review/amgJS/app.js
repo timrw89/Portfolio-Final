@@ -6,7 +6,9 @@ $(document).ready(function() {
             $.each(this, function(name, value){
                 if(name === 'image'){
                     reviewInfo += (`<img class ="albumImg" src ='${value}'>`) 
-                }  else {
+                }  else if(name === 'url') {
+                    reviewInfo += (`<a href= '${value}'><li>Go To Review</li></a>`);
+                }   else {
                     reviewInfo += (`<li>${value}</li>`);
                 }
                 
