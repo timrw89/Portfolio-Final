@@ -296,10 +296,7 @@ nav {
     width: 215px; 
     filter: grayscale(80%);
 }
-.card img:hover {
-    transform: scale(1.2);
-    filter: grayscale(0);
-}
+
 
 .webprojects .card:nth-child(1) {
     animation: cardfloat 8s ease-in-out infinite;
