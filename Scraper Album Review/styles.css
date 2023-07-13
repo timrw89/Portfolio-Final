@@ -6,7 +6,7 @@ body {
     display: flex;
     align-items: center;
     flex-direction: column;
-    background-image: linear-gradient(to bottom right, rgb(192, 190, 190), rgb(163, 3, 3), rgb(0, 53, 0), black);
+    background-image: linear-gradient(to bottom right, rgb(192, 190, 190), rgb(95, 40, 40), rgb(0, 53, 0), black);
 }
 header {
     display: flex;
