@@ -19,21 +19,15 @@ body {
   width: 100%;
   height: 100%;
   position: fixed;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
 }
 
 .background .color {
   position: absolute;
-  -webkit-filter: blur(150px);
-          filter: blur(150px);
+  filter: blur(200px);
+  opacity: 75%;
 }
 
 .background .color:nth-child(1) {
@@ -42,8 +36,7 @@ body {
   bottom: 5%;
   left: 0;
   background-color: #032cfa;
-  -webkit-animation: floaters 12s cubic-bezier(0.39, 0.575, 0.565, 0.5) infinite;
-          animation: floaters 12s cubic-bezier(0.39, 0.575, 0.565, 0.5) infinite;
+  animation: floaters 12s cubic-bezier(1, 3, 3, 1) infinite;
 }
 
 .background .color:nth-child(2) {
@@ -53,8 +46,7 @@ body {
   right: 10%;
   left: 10%;
   background-color: #03f6fa;
-  -webkit-animation: floaters 10s ease-in-out infinite;
-          animation: floaters 10s ease-in-out infinite;
+  animation: floaters 20s ease-in-out infinite;
 }
 
 .background .color:nth-child(3) {
@@ -63,8 +55,7 @@ body {
   top: 10%;
   right: 0;
   background-color: #fefefe;
-  -webkit-animation: floaters 3s ease-in-out infinite;
-          animation: floaters 3s ease-in-out infinite;
+  animation: floaters 12s ease-in-out infinite;
 }
 
 .background .color:nth-child(4) {
@@ -73,8 +64,7 @@ body {
   top: 0;
   right: 0;
   background-color: #fcfc07;
-  -webkit-animation: floaters 6s ease-in-out infinite;
-          animation: floaters 6s ease-in-out infinite;
+  animation: floaters 12s ease-in-out infinite;
 }
 
 .background .color:nth-child(5) {
@@ -84,63 +74,30 @@ body {
   background-color: #0df905;
 }
 
-@-webkit-keyframes floaters {
-  0% {
-    -webkit-transform: translate(0%, 0%);
-            transform: translate(0%, 0%);
-  }
-  25% {
-    -webkit-transform: translate(-80%, -25%);
-            transform: translate(-80%, -25%);
-  }
-  50% {
-    -webkit-transform: translate(25%, -125%);
-            transform: translate(25%, -125%);
-  }
-  75% {
-    -webkit-transform: translate(0%, 50%);
-            transform: translate(0%, 50%);
-  }
-  100% {
-    -webkit-transform: translate(0%, 0%);
-            transform: translate(0%, 0%);
-  }
-}
-
 @keyframes floaters {
   0% {
-    -webkit-transform: translate(0%, 0%);
-            transform: translate(0%, 0%);
+    transform: translate(0%, 0%);
   }
   25% {
-    -webkit-transform: translate(-80%, -25%);
-            transform: translate(-80%, -25%);
+    transform: translate(-80%, -25%);
   }
   50% {
-    -webkit-transform: translate(25%, -125%);
-            transform: translate(25%, -125%);
+    transform: translate(25%, -125%);
   }
   75% {
-    -webkit-transform: translate(0%, 50%);
-            transform: translate(0%, 50%);
+    transform: translate(0%, 50%);
   }
   100% {
-    -webkit-transform: translate(0%, 0%);
-            transform: translate(0%, 0%);
+    transform: translate(0%, 0%);
   }
 }
-
 #titleHolder {
   margin-top: 90px;
 }
 
 .title {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
   padding: 1rem;
   z-index: 3000;
   position: relative;
@@ -148,9 +105,7 @@ body {
 
 #title {
   display: none;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
   padding: 1rem;
   z-index: 3000;
   position: relative;
@@ -160,20 +115,12 @@ header {
   z-index: 4000;
   position: fixed;
   width: 95%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: row;
+  align-items: center;
   padding: 4%;
-  border-bottom: 1px solid #86c5d376;
-  -webkit-box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-          box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-bottom: 1px solid rgba(134, 197, 211, 0.462745098);
+  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   top: 0;
   -webkit-backdrop-filter: blur(15px);
           backdrop-filter: blur(15px);
@@ -198,28 +145,19 @@ ul {
   z-index: 5000;
   width: 0;
   height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: left;
-      -ms-flex-pack: left;
-          justify-content: left;
+  flex-direction: column;
+  justify-content: left;
   background-color: rgba(255, 255, 255, 0.414);
   position: fixed;
   top: 0;
   left: 0;
   overflow-x: hidden;
-  -webkit-transition: 0.5s;
   transition: 0.5s;
   padding-top: 100px;
   -webkit-backdrop-filter: hue-rotate(50deg) blur(15px);
           backdrop-filter: hue-rotate(50deg) blur(15px);
-  -webkit-box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-          box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .sidenav .navItem {
@@ -231,7 +169,7 @@ ul {
 }
 
 .navItem:hover {
-  color: #089d00a7;
+  color: rgba(8, 157, 0, 0.6549019608);
 }
 
 .sidenav .closebtn {
@@ -244,8 +182,7 @@ ul {
 
 .windOpen {
   height: 2rem;
-  -webkit-transform: scale(-1, 1);
-          transform: scale(-1, 1);
+  transform: scale(-1, 1);
 }
 
 #dropdown {
@@ -253,7 +190,6 @@ ul {
   display: none;
   text-align: right;
   padding: 0 3.5rem;
-  -webkit-transition: 1s;
   transition: 1s;
 }
 
@@ -270,7 +206,7 @@ ul {
 
 #dropdown li:hover {
   background: white;
-  background-color: #acaaaa;
+  background-color: rgb(172, 170, 170);
   cursor: pointer;
 }
 
@@ -278,16 +214,9 @@ nav {
   width: 30%;
   height: 50%;
   padding: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
 .topnav {
@@ -298,92 +227,48 @@ nav {
   z-index: 2000;
   margin: 90px 60px 15px;
   background-color: rgba(255, 255, 255, 0.414);
-  -webkit-box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-          box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  display: -webkit-box;
-  display: -ms-flexbox;
+  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   padding: 1em;
   border-radius: 0.25em;
   -webkit-backdrop-filter: hue-rotate(25deg);
           backdrop-filter: hue-rotate(25deg);
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
   display: none;
-  -webkit-animation: cardfloat 3s ease-in-out infinite;
-          animation: cardfloat 3s ease-in-out infinite;
+  animation: cardfloat 3s ease-in-out infinite;
 }
 
 .handwave {
   height: 2rem;
-  fill-opacity: .9;
-  -webkit-animation: wave 2s ease-in-out 1s infinite;
-          animation: wave 2s ease-in-out 1s infinite;
+  fill-opacity: 0.9;
+  animation: wave 2s ease-in-out 1s infinite;
   margin-left: 1.25%;
   fill: rgba(255, 255, 255, 0.742);
   cursor: pointer;
 }
 
-@-webkit-keyframes wave {
-  0% {
-    -webkit-transform: rotate(0deg) scale(1);
-            transform: rotate(0deg) scale(1);
-  }
-  33% {
-    -webkit-transform: rotate(-10deg) scale(1.05);
-            transform: rotate(-10deg) scale(1.05);
-  }
-  66% {
-    -webkit-transform: rotate(10deg) scale(1.05);
-            transform: rotate(10deg) scale(1.05);
-  }
-  100% {
-    -webkit-transform: rotate(0deg) scale(1);
-            transform: rotate(0deg) scale(1);
-  }
-}
-
 @keyframes wave {
   0% {
-    -webkit-transform: rotate(0deg) scale(1);
-            transform: rotate(0deg) scale(1);
+    transform: rotate(0deg) scale(1);
   }
   33% {
-    -webkit-transform: rotate(-10deg) scale(1.05);
-            transform: rotate(-10deg) scale(1.05);
+    transform: rotate(-10deg) scale(1.05);
   }
   66% {
-    -webkit-transform: rotate(10deg) scale(1.05);
-            transform: rotate(10deg) scale(1.05);
+    transform: rotate(10deg) scale(1.05);
   }
   100% {
-    -webkit-transform: rotate(0deg) scale(1);
-            transform: rotate(0deg) scale(1);
+    transform: rotate(0deg) scale(1);
   }
 }
-
 .cardholder {
   z-index: 1000;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 
 .card {
@@ -393,23 +278,13 @@ nav {
   margin: 20px;
   border-radius: 0 0.33em 0.33em 0.33em;
   background-color: rgba(255, 255, 255, 0.414);
-  -webkit-box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-          box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  display: -webkit-box;
-  display: -ms-flexbox;
+  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   -webkit-backdrop-filter: hue-rotate(-30deg);
           backdrop-filter: hue-rotate(-30deg);
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
 }
 
 .card h3 {
@@ -429,97 +304,53 @@ nav {
   border-radius: 8px;
   max-height: 90%;
   max-width: 100%;
-  -webkit-filter: grayscale(33%);
-          filter: grayscale(33%);
-  -webkit-transition: 0.19s ease-in;
+  filter: grayscale(33%);
   transition: 0.19s ease-in;
   padding-top: 5px;
 }
 
 .dashAdjust {
   width: 215px;
-  -webkit-filter: grayscale(80%);
-          filter: grayscale(80%);
-}
-
-.card img:hover {
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
-  -webkit-filter: grayscale(0);
-          filter: grayscale(0);
+  filter: grayscale(80%);
 }
 
 .webprojects .card:nth-child(1) {
-  -webkit-animation: cardfloat 4s ease-in-out infinite;
-          animation: cardfloat 4s ease-in-out infinite;
+  animation: cardfloat 8s ease-in-out infinite;
 }
 
 .webprojects .card:nth-child(2) {
-  -webkit-animation: cardfloat 3s ease-in-out infinite;
-          animation: cardfloat 3s ease-in-out infinite;
+  animation: cardfloat 6s ease-in-out infinite;
 }
 
 .webprojects .card:nth-child(3) {
-  -webkit-animation: cardfloat 4s ease-in-out infinite;
-          animation: cardfloat 4s ease-in-out infinite;
+  animation: cardfloat 8s ease-in-out infinite;
 }
 
 .webprojects .card:nth-child(4) {
-  -webkit-animation: cardfloat 3s ease-in-out infinite;
-          animation: cardfloat 3s ease-in-out infinite;
+  animation: cardfloat 6s ease-in-out infinite;
 }
 
 .webprojects .card:nth-child(5) {
-  -webkit-animation: cardfloat 4s ease-in-out infinite;
-          animation: cardfloat 4s ease-in-out infinite;
-}
-
-@-webkit-keyframes cardfloat {
-  0% {
-    -webkit-transform: translate(0%, 0%);
-            transform: translate(0%, 0%);
-  }
-  25% {
-    -webkit-transform: translate(0.1%, 1%);
-            transform: translate(0.1%, 1%);
-  }
-  50% {
-    -webkit-transform: translate(0%, -0.5%);
-            transform: translate(0%, -0.5%);
-  }
-  75% {
-    -webkit-transform: translate(-0.1%, -1%);
-            transform: translate(-0.1%, -1%);
-  }
-  100% {
-    -webkit-transform: translate(0%, 0%);
-            transform: translate(0%, 0%);
-  }
+  animation: cardfloat 8s ease-in-out infinite;
 }
 
 @keyframes cardfloat {
   0% {
-    -webkit-transform: translate(0%, 0%);
-            transform: translate(0%, 0%);
+    transform: translate(0%, 0%);
   }
   25% {
-    -webkit-transform: translate(0.1%, 1%);
-            transform: translate(0.1%, 1%);
+    transform: translate(0.1%, 1%);
   }
   50% {
-    -webkit-transform: translate(0%, -0.5%);
-            transform: translate(0%, -0.5%);
+    transform: translate(0%, -0.5%);
   }
   75% {
-    -webkit-transform: translate(-0.1%, -1%);
-            transform: translate(-0.1%, -1%);
+    transform: translate(-0.1%, -1%);
   }
   100% {
-    -webkit-transform: translate(0%, 0%);
-            transform: translate(0%, 0%);
+    transform: translate(0%, 0%);
   }
 }
-
 .musicHolder {
   margin-top: auto;
   z-index: 2000;
@@ -527,18 +358,12 @@ nav {
 
 .musicPlayers {
   padding: 35px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
 
 .bandcamp {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   padding: 10px;
   z-index: 2000;
 }
@@ -548,21 +373,14 @@ footer {
   width: 100%;
   position: fixed;
   padding: 0.5em;
-  border-top: 1px solid #86c5d376;
+  border-top: 1px solid rgba(134, 197, 211, 0.462745098);
   margin-top: 1rem;
-  -webkit-box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-          box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  display: -webkit-box;
-  display: -ms-flexbox;
+  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: flex-start;
+  align-items: center;
   bottom: 0;
-  background-color: #fefefe4e;
+  background-color: rgba(254, 254, 254, 0.3058823529);
   -webkit-backdrop-filter: blur(10.5px);
           backdrop-filter: blur(10.5px);
 }
@@ -584,13 +402,11 @@ footer h3 {
   padding: 5px;
   fill: rgba(50, 49, 49, 0.908);
   cursor: pointer;
-  -webkit-transition: 0.25s ease-in-out;
   transition: 0.25s ease-in-out;
 }
 
 .socials:hover {
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
+  transform: scale(1.2);
 }
 
 .social-container {
@@ -608,35 +424,19 @@ footer h3 {
     padding: 0;
   }
   .cardholder {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    flex-direction: row;
   }
   .titleHolder {
     margin-top: 200px;
   }
 }
-
 @media (min-width: 1024px) {
-  .background .color {
-    -webkit-filter: blur(300px);
-            filter: blur(300px);
-  }
   .topnav {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
   }
   header {
     height: 0.1rem;
@@ -647,22 +447,12 @@ footer h3 {
     text-decoration: none;
     font-size: 20px;
     color: #111;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    flex-direction: row;
   }
   #navLanguage {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    flex-direction: row;
     padding: 3px;
   }
   #navLanguage svg {
@@ -677,5 +467,4 @@ footer h3 {
   .windOpen {
     display: none;
   }
-}
-/*# sourceMappingURL=styles.css.map */
+}/*# sourceMappingURL=styles.css.map */
