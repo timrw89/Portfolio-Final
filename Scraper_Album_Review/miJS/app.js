@@ -1,5 +1,7 @@
+
+
 $(document).ready(function() {
-    $.getJSON('http://127.0.0.1:5500/miJS/MIData.Json', function (data) {
+    $.getJSON('http://127.0.0.1:3000/MIData.Json', function (data) {
         var reviewInfo = ' ';
         $.each(data, function() {
             reviewInfo += '<ul class ="reviewCard">'

@@ -1,9 +1,11 @@
 
+
+
 const PORT = 8000
 const axios = require('axios');
 const cheerio = require('cheerio');
 const express = require('express');
-const nodemon = require('nodemon');
+
 const fs = require('fs');
 
 const app = express();
@@ -48,3 +50,10 @@ axios(url)
 
 
     app.listen(PORT, () => console.log(`server running on PORT ${PORT}`))
+
+    
+
+
+
+              
+
